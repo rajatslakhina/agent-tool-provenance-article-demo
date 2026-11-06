@@ -1,0 +1,23 @@
+<html><head><link rel="stylesheet" href="base.css"><style>
+body{width:1400px;height:650px;background:#fff;color:#1f2328;overflow:hidden}
+.wrap{padding:46px 60px}
+h2{font-size:32px;font-weight:800}.sub{font-size:19px;color:#59636e;margin-top:8px}
+table{width:100%;border-collapse:collapse;margin-top:24px}
+th{font-size:17px;color:#59636e;text-align:right;padding:10px 14px;border-bottom:2px solid #d1d9e0}
+th:first-child,td:first-child{text-align:left}
+td{font-size:21px;padding:13px 14px;border-bottom:1px solid #eaeef2;text-align:right}
+.r{color:#cf222e;font-weight:800}.g{color:#1a7f37;font-weight:800}.b{color:#0969da;font-weight:800}
+tr.best td{background:#dafbe1}
+</style></head><body><div class="wrap">
+<h2>One tampered build, seven install policies</h2>
+<div class="sub">Constructed fleet: 12 Macs, 5 on Cursor, 3 holding release keys (5 secrets in total). 11-hour window. Output of <span class="mono">Sample.replayAll()</span>.</div>
+<table>
+<tr><th>Policy</th><th>Macs backdoored</th><th>Key holders hit</th><th>Secrets exposed</th><th>Blocked + alert</th><th>Real update delivered</th></tr>
+<tr><td>Auto-update from the editor's marketplace</td><td class="r">5</td><td class="r">2</td><td class="r">4</td><td>0</td><td>7</td></tr>
+<tr><td>Publisher allowlist</td><td class="r">5</td><td class="r">2</td><td class="r">4</td><td>0</td><td>7</td></tr>
+<tr><td>Version pin (bumped to 2.1.312)</td><td class="r">5</td><td class="r">2</td><td class="r">4</td><td>0</td><td>7</td></tr>
+<tr><td>Digest lockfile</td><td class="g">0</td><td class="g">0</td><td class="g">0</td><td class="b">5</td><td>7</td></tr>
+<tr><td>Canary ring + integrity check</td><td class="r">1</td><td class="g">0</td><td class="g">0</td><td>0</td><td>1</td></tr>
+<tr><td>Release keys in CI only</td><td class="r">5</td><td class="r">2</td><td class="g">0</td><td>0</td><td>7</td></tr>
+<tr class="best"><td>Digest lockfile + canary + keys in CI</td><td class="g">0</td><td class="g">0</td><td class="g">0</td><td class="b">1</td><td>1</td></tr>
+</table></div></body></html>

@@ -1,0 +1,21 @@
+<html><head><link rel="stylesheet" href="base.css"><style>
+body{width:1400px;height:700px;overflow:hidden;background:radial-gradient(1200px 600px at 80% 20%,#1f2a44 0%,#0d1117 60%)}
+.wrap{padding:70px 80px;height:100%;display:flex;flex-direction:column;justify-content:space-between}
+.k{font-size:22px;letter-spacing:3px;text-transform:uppercase;color:#7d8590}
+h1{font-size:64px;line-height:1.08;font-weight:800;max-width:1150px;margin-top:22px}
+h1 em{font-style:normal;color:#ff7b72}
+.row{display:flex;gap:28px}
+.card{flex:1;border-radius:18px;padding:22px 26px;border:2px solid #30363d;background:#161b22}
+.card.bad{border-color:#f85149;background:#2a1215}
+.card.ok{border-color:#3fb950;background:#0f2417}
+.lbl{font-size:18px;color:#7d8590;margin-bottom:8px}
+.id{font-size:24px}
+.sha{font-size:22px;margin-top:10px}
+.bad .sha{color:#ff7b72}.ok .sha{color:#56d364}
+</style></head><body><div class="wrap">
+<div><div class="k">Agent tooling · supply chain · iOS engineering lead</div>
+<h1>Same publisher. Same version. <em>Different bytes.</em></h1><div style="font-size:28px;color:#9da7b3;margin-top:22px">Replaying the backdoored Claude Code extension against seven install policies</div></div>
+<div class="row">
+<div class="card ok"><div class="lbl">Publisher's channel</div><div class="id mono">Anthropic.claude-code@2.1.312</div><div class="sha mono">sha256 8c2e5f71… ✓ matches lockfile</div></div>
+<div class="card bad"><div class="lbl">Redistributor marketplace</div><div class="id mono">Anthropic.claude-code@2.1.312</div><div class="sha mono">sha256 d41b7e09… ✗ blocked</div></div>
+</div></div></body></html>

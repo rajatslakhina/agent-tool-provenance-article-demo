@@ -1,0 +1,25 @@
+<html><head><link rel="stylesheet" href="base.css"><style>
+body{width:1400px;height:590px;background:#ffffff;color:#1f2328;overflow:hidden}
+.wrap{padding:50px 60px}
+h2{font-size:34px;font-weight:800}
+.sub{font-size:20px;color:#59636e;margin-top:8px}
+table{border-collapse:separate;border-spacing:0 12px;width:100%;margin-top:26px}
+th{font-size:18px;color:#59636e;text-align:left;font-weight:600;padding:0 18px}
+td{font-size:21px;padding:18px;background:#f6f8fa}
+td:first-child{border-radius:12px 0 0 12px;font-weight:700;width:300px}
+td:last-child{border-radius:0 12px 12px 0}
+.p{color:#1a7f37;font-weight:700}.f{color:#cf222e;font-weight:700}
+.hl td{background:#dafbe1}
+.note{font-size:18px;color:#59636e;margin-top:14px;line-height:1.5}
+</style></head><body><div class="wrap">
+<h2>What each check can see</h2>
+<div class="sub">Two artifacts that both claim to be <span class="mono">Anthropic.claude-code@2.1.312</span></div>
+<table>
+<tr><th>Check</th><th>Real build · publisher's channel</th><th>Tampered build · Cursor's marketplace</th><th>Tells them apart?</th></tr>
+<tr><td>Publisher allowlist</td><td class="mono">"Anthropic" <span class="p">✓ admit</span></td><td class="mono">"Anthropic" <span class="p">✓ admit</span></td><td class="f">No</td></tr>
+<tr><td>Version pin</td><td class="mono">"2.1.312" <span class="p">✓ admit</span></td><td class="mono">"2.1.312" <span class="p">✓ admit</span></td><td class="f">No</td></tr>
+<tr><td>Marketplace ID</td><td class="mono">Anthropic.claude-code <span class="p">✓</span></td><td class="mono">Anthropic.claude-code <span class="p">✓</span></td><td class="f">No</td></tr>
+<tr class="hl"><td>sha256 lockfile</td><td class="mono">8c2e5f71… <span class="p">✓ admit</span></td><td class="mono">d41b7e09… <span class="f">✗ block</span></td><td class="p">Yes</td></tr>
+</table>
+<div class="note">The first three are strings the uploader types. The digest is computed from the downloaded bytes and compared with the build you reviewed from the publisher's own channel. Digests are illustrative; they come from the ProvenanceGate replay.</div>
+</div></body></html>
