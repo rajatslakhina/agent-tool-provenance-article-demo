@@ -4,6 +4,8 @@
 
 On 29 October 2026 a maliciously modified build of Anthropic's Claude Code extension was served by Cursor's extension marketplace for about 11 hours. It carried the right publisher ID and ordinary version numbers. This repo rebuilds that incident as a deterministic replay in Swift and runs it against seven install policies on a constructed 12-Mac iOS team.
 
+Article: [The Backdoored Claude Code Extension Passed Every Name Check. In My Replay, Only a Digest Stopped It Everywhere.](https://medium.com/@er.rajatlakhina/the-backdoored-claude-code-extension-passed-every-name-check-f3a042d1a8f2)
+
 ![ProvenanceGate running on the iOS Simulator: auto-update, digest lockfile, canary ring](docs/simulator.png)
 
 ## What it shows
